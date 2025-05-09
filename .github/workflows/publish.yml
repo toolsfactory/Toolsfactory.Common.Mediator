@@ -33,6 +33,7 @@ jobs:
             LATEST_TAG=$(versionize inspect)
             export LATEST_TAG
             echo "LATEST_TAG set to: $LATEST_TAG"
+            echo "LATEST_TAG=$LATEST_TAG" >> $GITHUB_ENV
 
       - name: Build Project
         run:  dotnet build Toolsfactory.Common.Mediator.sln  --no-restore -c Release

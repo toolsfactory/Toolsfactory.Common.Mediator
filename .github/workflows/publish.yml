@@ -30,9 +30,9 @@ jobs:
             git config --global user.name "github-actions"
             git config --global user.email "actions@github.com"
             versionize 
-            $latestTag = versionize inspect
-            echo "latestTag=$latestTag"
-            echo "LATEST_TAG=$latestTag" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+            LATEST_TAG=$(versionize inspect)
+            export LATEST_TAG
+            echo "LATEST_TAG set to: $LATEST_TAG"
 
       - name: Build Project
         run: dotnet pack -c Release --no-restore

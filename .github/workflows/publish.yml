@@ -23,7 +23,7 @@ jobs:
         run: dotnet tool install --global versionize
 
       - name: Restore Dependencies
-        run: dotnet restore Toolsfactory.Common.Mediator.sln
+        run: dotnet build Toolsfactory.Common.Mediator.sln -c Release
 
       - name: Versionize
         run: | 

@@ -4,6 +4,34 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	  <Title>Toolsfactory Mediator Library</Title>
+	  <Authors>Michael Geissler</Authors>
+	  <Company>Toolsfactory</Company>
+	  <Description>A small library providing a minimal mediator implementation.</Description>
+	  <Copyright>(c) 2025 Michael Geissler</Copyright>
+	  <PackageProjectUrl>https://github.com/toolsfactory/toolsfactory.common.mediator</PackageProjectUrl>
+	  <PackageReadmeFile>README.md</PackageReadmeFile>
+	  <RepositoryUrl>https://github.com/toolsfactory/toolsfactory.common.mediator</RepositoryUrl>
+	  <RepositoryType>git</RepositoryType>
+	  <PackageTags>Mediator, Eventbus</PackageTags>
+	  <PackageOutputPath>..\..\bin</PackageOutputPath>
+	  <PackageLicenseFile>LICENSE</PackageLicenseFile>
+	  <AssemblyVersion>0.1.0</AssemblyVersion>
+	  <FileVersion>0.1.0</FileVersion>
+	  <Version>0.1.0</Version>
+	  <BaseOutputPath>..\..\bin</BaseOutputPath>
   </PropertyGroup>
+
+  <ItemGroup>
+	  <None Include="..\..\LICENSE">
+		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
+	  </None>
+	  <None Include="..\..\README.md">
+		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
+	  </None>
+  </ItemGroup>
 
 </Project>

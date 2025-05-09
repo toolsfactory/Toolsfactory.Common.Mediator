@@ -25,7 +25,7 @@ namespace Toolsfactory.Common.Mediator
         [LoggerMessage(7, LogLevel.Debug, "Invoking handler of type {HandlerType} for notification {NotificationType}")]
         public static partial void InvokingHandler(ILogger logger, string handlerType, string notificationType);
 
-        [LoggerMessage(8, LogLevel.Error, "Handler of type {HandlerType} failed for notification {NotificationType}: {Exception}")]
-        public static partial void HandlerFailed(ILogger logger, string handlerType, string notificationType, Exception exception);
+        [LoggerMessage(8, LogLevel.Error, "Handler of type {HandlerType} failed for notification {NotificationType}")]
+        public static partial void HandlerFailed(ILogger logger, string handlerType, string notificationType);
     }
 }

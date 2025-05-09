@@ -141,7 +141,7 @@ namespace Toolsfactory.Common.Mediator
                 catch (Exception ex)
                 {
                     // Log the exception or handle it as needed
-                    Log.HandlerFailed(_logger, handler!.GetType().Name, typeof(TNotification).Name, ex);
+                    Log.HandlerFailed(_logger, handler!.GetType().Name, typeof(TNotification).Name);
                 }
             });
 

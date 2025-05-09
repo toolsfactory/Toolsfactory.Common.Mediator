@@ -65,5 +65,5 @@ jobs:
       - name: Show packages
         run: ls -la bin/Release/
 
-#      - name: Publish Package
-#        run: dotnet nuget push bin/Release/*.nupkg -k ${{secrets.NUGET_PUBLISH_KEY}} -s https://api.nuget.org/v3/index.json  --skip-duplicate
+      - name: Publish Packages
+        run: dotnet nuget push bin/Release/*.nupkg -k ${{secrets.NUGET_PUBLISH_KEY}} -s https://api.nuget.org/v3/index.json  --skip-duplicate

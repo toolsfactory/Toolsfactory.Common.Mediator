@@ -1,0 +1,62 @@
+name: Create Release
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '9.0.x'  # Change as needed
+
+      - name: Install versionize
+        run: dotnet tool install --global versionize
+
+      - name: Restore Dependencies
+        run: dotnet restore WaipuTester.sln
+
+      - name: Versionize
+        run: | 
+            git config --global user.name "github-actions"
+            git config --global user.email "actions@github.com"
+            versionize 
+            $latestTag = versionize inspect
+            echo "latestTag=$latestTag"
+            echo "LATEST_TAG=$latestTag" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+
+      - name: Build Project
+        run: dotnet pack -c Release --no-restore
+
+      - name: push versionized changes  
+        run: | 
+            git config --global user.name "github-actions"
+            git config --global user.email "actions@github.com"
+            git push --follow-tags origin HEAD:main
+  
+      - name: release
+        uses: actions/create-release@v1
+        id: create_release
+        with:
+          draft: false
+          prerelease: false
+          release_name: v${{ env.LATEST_TAG }}
+          tag_name: v${{ env.LATEST_TAG }}
+          body_path: CHANGELOG.md
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
+      - name: Show packages
+        run: ls -la bin/Release/
+
+#      - name: Publish Package
+#        run: dotnet nuget push bin/Release/*.nupkg -k ${{secrets.NUGET_PUBLISH_KEY}} -s https://api.nuget.org/v3/index.json  --skip-duplicate

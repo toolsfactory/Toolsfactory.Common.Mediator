@@ -35,7 +35,14 @@ jobs:
             echo "LATEST_TAG set to: $LATEST_TAG"
 
       - name: Build Project
-        run: dotnet pack Toolsfactory.Common.Mediator.sln  -c Release --no-restore
+        run:  dotnet build Toolsfactory.Common.Mediator.sln  -c Release --no-restore
+            dotnet pack Toolsfactory.Common.Mediator.sln  -c Release --no-restore
+
+      - name: Show packages
+        run: ls -la bin/Release/
+
+      - name: Pack Nuget packages
+        run:  dotnet pack Toolsfactory.Common.Mediator.sln  -c Release --no-restore
 
       - name: push versionized changes  
         run: | 

@@ -23,7 +23,7 @@ jobs:
         run: dotnet tool install --global versionize
 
       - name: Restore Dependencies
-        run: dotnet restore WaipuTester.sln
+        run: dotnet restore Toolsfactory.Common.Mediator.sln
 
       - name: Versionize
         run: | 

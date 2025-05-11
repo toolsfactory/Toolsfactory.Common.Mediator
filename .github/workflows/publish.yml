@@ -46,7 +46,7 @@ jobs:
       - name: Build Implementation Project
         run:  |
           dotnet build src/Toolsfactory.Common.Mediator.Abstractions/Toolsfactory.Common.Mediator.Abstractions.csproj -c Release -p:UseProjectReferences=false 
-          dotnet pack src/Toolsfactory.Common.Mediator.Abstractions/Toolsfactory.Common.Mediator.Abstractions.csproj -c Release -p:UseProjectReferences=false pack Toolsfactory.Common.Mediator.sln  -c Release --no-restore
+          dotnet pack src/Toolsfactory.Common.Mediator.Abstractions/Toolsfactory.Common.Mediator.Abstractions.csproj -c Release -p:UseProjectReferences=false
 
       - name: push versionized changes  
         run: | 

@@ -37,16 +37,16 @@ jobs:
 
       - name: Build Abstractions Project
         run:  |
-          dotnet build src/Toolsfactory.Common.Mediator.Abstractions/Toolsfactory.Common.Mediator.Abstractions.csproj -c Release -p:UseProjectReferences=false  -p:Version=${{ env.VERSION }}
-          dotnet pack src/Toolsfactory.Common.Mediator.Abstractions/Toolsfactory.Common.Mediator.Abstractions.csproj -c Release -p:UseProjectReferences=false -p:Version=${{ env.VERSION }}
+          dotnet build src/Toolsfactory.Common.Mediator.Abstractions/Toolsfactory.Common.Mediator.Abstractions.csproj -c Release -p:UseProjectReferences=false  -p:Version=${{ env.VERSION }} -p:NuGetVersion=${{ env.VERSION }}
+          dotnet pack src/Toolsfactory.Common.Mediator.Abstractions/Toolsfactory.Common.Mediator.Abstractions.csproj -c Release -p:UseProjectReferences=false -p:Version=${{ env.VERSION }} -p:NuGetVersion=${{ env.VERSION }}
 
       - name: Add local NuGet source
         run: dotnet nuget add source ./bin -n local-temp
 
       - name: Build Implementation Project
         run:  |
-          dotnet build src/Toolsfactory.Common.Mediator/Toolsfactory.Common.Mediator.csproj -c Release -p:UseProjectReferences=false  -p:Version=${{ env.VERSION }}
-          dotnet pack src/Toolsfactory.Common.Mediator/Toolsfactory.Common.Mediator.csproj -c Release -p:UseProjectReferences=false -p:Version=${{ env.VERSION }}
+          dotnet build src/Toolsfactory.Common.Mediator/Toolsfactory.Common.Mediator.csproj -c Release -p:UseProjectReferences=false  -p:Version=${{ env.VERSION }} -p:NuGetVersion=${{ env.VERSION }}
+          dotnet pack src/Toolsfactory.Common.Mediator/Toolsfactory.Common.Mediator.csproj -c Release -p:UseProjectReferences=false -p:Version=${{ env.VERSION }} -p:NuGetVersion=${{ env.VERSION }}
 
       - name: push versionized changes  
         run: | 

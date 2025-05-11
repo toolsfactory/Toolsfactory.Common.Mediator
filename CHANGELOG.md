@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="0.2.0"></a>
+## [0.2.0](https://www.github.com/toolsfactory/Toolsfactory.Common.Mediator/releases/tag/v0.2.0) (2025-05-11)
+
+### ✨ Features
+
+* first version with correct reference to nuget abstractions package ([3c2066a](https://www.github.com/toolsfactory/Toolsfactory.Common.Mediator/commit/3c2066a37dfd8f3f47a8904efa0603c1ed83f8fe))
+
+### 🐛 Bug Fixes
+
+* added clean project to package reference switching for ci/cd ([b1d949d](https://www.github.com/toolsfactory/Toolsfactory.Common.Mediator/commit/b1d949d9dc0ece26a5cff66e4c53ef7d4f82e24b))
+* removed some corrupted parameters in build script ([9d0f8a2](https://www.github.com/toolsfactory/Toolsfactory.Common.Mediator/commit/9d0f8a233354e75deb9e86da20c809c0681150d8))
+
+### Other
+
+* Merge branch 'main' of https://github.com/toolsfactory/Toolsfactory.Common.Mediator ([42d3457](https://www.github.com/toolsfactory/Toolsfactory.Common.Mediator/commit/42d34571189ebaa93cfb40e82c4180d61e2de1bb))
+
 <a name="0.1.3"></a>
 ## [0.1.3](https://www.github.com/toolsfactory/Toolsfactory.Common.Mediator/releases/tag/v0.1.3) (2025-05-09)
 

@@ -8,6 +8,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "other", "other", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		build\AbstractionsPackage.targets = build\AbstractionsPackage.targets
+		build\Directory.Build.props = build\Directory.Build.props
 		LICENSE = LICENSE
 		.github\workflows\publish.yml = .github\workflows\publish.yml
 		README.md = README.md

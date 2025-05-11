@@ -1,0 +1,15 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Target Name="SwitchInterfaceReference" BeforeTargets="ResolveReferences">
+    <!-- Wenn UseProjectReferences=false, entfernen wir vorhandene ProjectReferences -->
+    <ItemGroup Condition="'$(UseProjectReferences)' != 'true'">
+      <ProjectReference Remove="@(ProjectReference)" Condition="'%(ProjectReference.Identity)' == '..\Toolsfactory.Common.Mediator.Abstractions\Toolsfactory.Common.Mediator.Abstractions.csproj'" />
+    </ItemGroup>
+
+    <!-- Und fügen eine PackageReference ein, falls noch nicht vorhanden -->
+    <ItemGroup Condition="'$(UseProjectReferences)' != 'true' and '@(PackageReference)' == ''">
+      <PackageReference Include="Toolsfactory.Common.Mediator.Abstractions" Version="$(Version)" />
+    </ItemGroup>
+  </Target>
+
+</Project>

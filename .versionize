@@ -1,0 +1,19 @@
+﻿
+{
+  "changelog": {
+    "header": "Changelog",
+    "includeAllCommits": true,
+    "sections": [
+      {
+        "type": "feat",
+        "section": "✨ Features",
+        "hidden": false
+      },
+      {
+        "type": "fix",
+        "section": "🐛 Bug Fixes",
+        "hidden": false
+      }
+    ]
+  }
+}

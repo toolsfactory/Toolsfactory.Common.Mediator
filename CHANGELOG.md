@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="0.2.1"></a>
+## [0.2.1](https://www.github.com/toolsfactory/Toolsfactory.Common.Mediator/releases/tag/v0.2.1) (2025-05-11)
+
+### Other
+
+* Update publish.yml ([cf7ca83](https://www.github.com/toolsfactory/Toolsfactory.Common.Mediator/commit/cf7ca8304b72932160b77b15c82b49885cb4e891))
+* Update publish.yml ([c496326](https://www.github.com/toolsfactory/Toolsfactory.Common.Mediator/commit/c49632602cfe6d8dcc3ef5366c887084f8e3ebac))
+* Update publish.yml ([4e9a476](https://www.github.com/toolsfactory/Toolsfactory.Common.Mediator/commit/4e9a4765bec18116961029b7ce87ce1d644e7991))
+* Update publish.yml ([c891422](https://www.github.com/toolsfactory/Toolsfactory.Common.Mediator/commit/c8914229ca5d3c9afeef1dabd857a2ed3429c44f))
+
 <a name="0.2.0"></a>
 ## [0.2.0](https://www.github.com/toolsfactory/Toolsfactory.Common.Mediator/releases/tag/v0.2.0) (2025-05-11)
 

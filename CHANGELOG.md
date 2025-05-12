@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="0.2.2"></a>
+## [0.2.2](https://www.github.com/toolsfactory/Toolsfactory.Common.Mediator/releases/tag/v0.2.2) (2025-05-12)
+
 <a name="0.2.1"></a>
 ## [0.2.1](https://www.github.com/toolsfactory/Toolsfactory.Common.Mediator/releases/tag/v0.2.1) (2025-05-11)
 
